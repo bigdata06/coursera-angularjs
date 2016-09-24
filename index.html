@@ -1,33 +1,17 @@
 <!doctype html>
 <html lang="en" ng-app='LunchChecker'>
   <head>
-    <title>Lunch Checker</title>
+    <title>Assignments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
   </head>
 <body>
-   <div class="container" ng-controller='LunchCheckerController'>
-     <h1>Lunch Checker</h1>
+	<h1><a href="https://jhubyoung.github.io/coursera-test/module1-solution/index.html">Assigmnent 1</a></h1>
+	<h1><a href="https://jhubyoung.github.io/coursera-test/module2-solution/index.html">Assigmnent 2</a></h1>
 
-         <div class="form-group">
-             <input id="lunch-menu" type="text" ng-model="dishes"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default" ng-click="countDishes();">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           <div class="{{textStyle}}">
-             {{nbDishes}}
-           </div>
-         </div>
-   </div>
 
 </body>
 </html>
