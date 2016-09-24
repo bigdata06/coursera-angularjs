@@ -20,7 +20,6 @@ function ToBuyShoppingController(ShoppingListCheckOffService,$scope) {
   toBuyList.toBuyItems = ShoppingListCheckOffService.getToBuyItems();
 
   toBuyList.buyItem = function(itemIndex) {
-    console.log("buyitem"+itemIndex);
     ShoppingListCheckOffService.buyItem(itemIndex);
   }
 
