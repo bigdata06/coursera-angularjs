@@ -1,7 +1,6 @@
 <h2>Categories</h2>
 <ul>
   <li ng-repeat="item in categoriesList.items" ui-sref="categoriesList.itemDetail({category: item.short_name})">
-    <!-- ui-sref="mainList.itemDetail({itemId: $index})"> pour le clic -->
     {{ item.id }} {{ item.short_name }} {{ item.name }}
   </li>
 </ul>

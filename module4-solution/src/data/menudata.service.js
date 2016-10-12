@@ -18,9 +18,7 @@ function MenuDataService(ApiBasePath, $http) {
   return response.then(function (result) {
     var categories = [];
     for (var i = 0; i < result.data.length; i++) {
-      //  if (result.data.menu_items[i].description.toLowerCase().indexOf(searchTerm) !== -1) {
          categories.push(result.data[i]);
-      //  }
      }
    return categories;
   })
@@ -38,9 +36,7 @@ function MenuDataService(ApiBasePath, $http) {
   return response.then(function (result) {
       var foundItems = [];
       for (var i = 0; i < result.data.menu_items.length; i++) {
-        //  if (result.data.menu_items[i].short_name.toLowerCase().indexOf(categoryShortName) !== -1) {
            foundItems.push(result.data.menu_items[i]);
-        //  }
        }
      return foundItems;
     })

@@ -28,7 +28,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesListController as categoriesList',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
-        console.log("categoriesListitems");
         return MenuDataService.getAllCategories();
       }]
     }
@@ -40,7 +39,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: "ItemsDetailController as itemsList",
     resolve: {
       items: ['MenuDataService','$stateParams', function (MenuDataService,$stateParams) {
-          console.log("itemsList"+$stateParams.category);
         return MenuDataService.getItemsForCategory($stateParams.category);
       }],
       category: ['$stateParams', function ($stateParams) {

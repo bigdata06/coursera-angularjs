@@ -7,7 +7,6 @@ angular.module('MenuApp')
 
 ItemsDetailController.$inject = ['$stateParams', 'items','category'];
 function ItemsDetailController($stateParams, items, category) {
-console.log("items :",items);
   var itemDetail = this;
   itemDetail.items=items;
   itemDetail.category=category;
