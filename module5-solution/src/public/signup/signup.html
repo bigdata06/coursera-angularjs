@@ -1,0 +1,49 @@
+ <div class="container">
+   <form name='signupForm' novalidate>
+       <div>
+         First Name :
+         <input type="text" ng-model="signUpCtrl.user.firstName" name="firstName" placeholder="first name" required minlength="1">
+         <span ng-if="signupForm.firstName.$invalid && signupForm.firstName.$touched">
+           Fisrt name must be filled!
+         </span>
+       </div>
+       <div>
+         Last Name :
+         <input type="text" ng-model="signUpCtrl.user.lastName" name="lastName" placeholder="last name" required minlength="1">
+         <span ng-if="signupForm.lastName.$invalid && signupForm.lastName.$touched">
+           Last name must be filled!
+         </span>
+       </div>
+       <div>
+         Phone :
+         <input type="text" ng-model="signUpCtrl.user.phoneNumber" name="phone" placeholder="phone number ###-###-####" required pattern="(\d{3})-(\d{3})-(\d{4})">
+         <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+           Must be a valid phone: ###-###-#### format
+         </span>
+       </div>
+       <div>
+         Email :
+         <input type="email" ng-model="signUpCtrl.user.email" name="email" placeholder="email" required>
+         <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+           Must be a valid email address: handle@domain format
+         </span>
+       </div>
+       <div>
+         Favorite menu number :
+         <input type="text" ng-model="signUpCtrl.user.menuNumber" name="menuNumber" placeholder="menu number" required item-exist>
+         <span ng-if="signUpCtrl.error || (signupForm.menuNumber.$invalid && signupForm.menuNumber.$touched)">
+           No such menu number exists.
+         </span>
+       </div>
+        <div align="center">
+          <button ng-click="signUpCtrl.signUp()"
+          ng-disabled="signupForm.$invalid">Submit</button>
+        </div>
+
+    </form>
+    <div>
+      <span ng-show="signUpCtrl.saved">
+        <h2>Your information has been saved.</h2>
+      </span>
+    </div>
+ </div>
